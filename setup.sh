@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #--- Self-contained Script ---
-bash $HOME/satellaos-devuan-edition-testing/source/run.sh
+bash $HOME/satellaos-devuan-edition-testing/tree-installer-system/source/run.sh
 source "$HOME/.satellaos-source/installer"
 #-----------------------------
 
