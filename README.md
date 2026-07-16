@@ -88,6 +88,16 @@ Benefits include:
 
 ---
 
+# 🎯 Development Target
+
+SatellaOS Devuan Edition (Testing) is officially developed for **Devuan Excalibur**.
+
+All development, testing, and compatibility efforts are focused on **Devuan Excalibur** to provide the most stable OpenRC-based experience possible.
+
+Support for other Devuan releases is not guaranteed.
+
+---
+
 # ⚠️ Experimental Notice
 
 Although OpenRC is now the official init system, this repository remains **experimental**.
