@@ -1,0 +1,19 @@
+#!/bin/bash
+
+ROOT_UID=0
+HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+THEME_DIR="/boot/grub/themes"
+THEME_NAME="satellaos-grub-theme-polaris"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [ "$UID" -eq "$ROOT_UID" ]; then
+  [[ -d "${THEME_DIR}/${THEME_NAME}" ]] && rm -rf "${THEME_DIR}/${THEME_NAME}"
+  mkdir -p "${THEME_DIR}/${THEME_NAME}"
+  rsync -a --delete "${SCRIPT_DIR}/${THEME_NAME}/" "${THEME_DIR}/${THEME_NAME}/"
+  cp -an /etc/default/grub /etc/default/grub.bak
+  grep -q "GRUB_THEME=" /etc/default/grub && sed -i '/GRUB_THEME=/d' /etc/default/grub
+  echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> /etc/default/grub
+  update-grub
+else
+  sudo "$0"
+fi

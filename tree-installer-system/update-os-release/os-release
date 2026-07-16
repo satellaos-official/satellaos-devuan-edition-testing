@@ -1,0 +1,11 @@
+PRETTY_NAME="SatellaOS v3 (Sirius)"
+NAME="SatellaOS"
+OS_TYPE="GNU/Linux"
+ID=satellaos
+# ID_LIKE=debian
+VERSION="v3 (Sirius)"
+VERSION_ID="3"
+VERSION_CODENAME="sirius"
+VERSION_YEAR="2026"
+RELEASE_QUARTER="Q3"
+HOME_URL="https://github.com/satellaos-official"
