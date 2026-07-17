@@ -1,7 +1,0 @@
-[user]
-pinned=thunar;xfce4-terminal;xfce4-web-browser;
-middleButtonBehavior=1
-showPreviews=true
-indicatorColorFromTheme=false
-forceIconSize=true
-iconSize=24

@@ -12,3 +12,5 @@ sudo apt install -y engrampa \
 
 sudo apt install -y --no-install-recommends lightdm-gtk-greeter-settings \
 	xfce4-screenshooter
+
+sudo apt purge -y xfce-polkit
