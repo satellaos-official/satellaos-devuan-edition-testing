@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#--- Self-contained Script ---
+#------- Source Script -------
 bash $HOME/satellaos-devuan-edition-testing/tree-installer-system/source/run.sh
 source "$HOME/.satellaos-source/installer"
 #-----------------------------
@@ -17,8 +17,8 @@ bash $script_source/silent-kernel/run.sh
 bash $script_source/grub-settings/run.sh
 bash $script_source/grub-theme/run.sh
 bash $script_source/lightdm-settings/run.sh
-# bash $script_source/user-configuration-settings/run.sh
-# bash $script_source/skel-configuration-settings/run.sh
+bash $script_source/update-etc-skel-configuration/run.sh
+bash $script_source/update-user-configuration/run.sh
 bash $script_source/pictures/run.sh
 bash $script_source/themes/run-part1.sh
 bash $script_source/themes/run-part2.sh
