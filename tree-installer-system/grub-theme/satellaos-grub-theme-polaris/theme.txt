@@ -5,7 +5,7 @@
 title-text: ""
 desktop-image: "background.png"
 desktop-color: "#242424"
-terminal-font: "Inter Regular 14"
+terminal-font: "GNU Unifont Regular 16"
 terminal-box: "terminal_box_*.png"
 terminal-left: "0"
 terminal-top: "0"
@@ -19,7 +19,7 @@ terminal-border: "0"
   top = 22%
   width = 34%
   height = 64%
-  item_font = "Inter Regular 16"
+  item_font = "GNU Unifont Regular 16"
   item_color = "#ffffff"
   selected_item_color = "#ffffff"
   icon_width = 0
@@ -40,5 +40,5 @@ terminal-border: "0"
   id = "__timeout__"
   text = "Booting in %d seconds"
   color = "#ffffff"
-  font = "Inter Regular 16"
+  font = "GNU Unifont Regular 16"
 }

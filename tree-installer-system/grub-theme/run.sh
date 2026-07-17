@@ -5,6 +5,8 @@ THEME_NAME="satellaos-grub-theme-polaris"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [ "$UID" -eq 0 ]; then
+  [[ -f /boot/grub/splash.png ]] && sudo mv /boot/grub/splash.png /boot/grub/splash-backup.png
+
   [[ -d "${THEME_DIR}/${THEME_NAME}" ]] && rm -rf "${THEME_DIR}/${THEME_NAME}"
   mkdir -p "${THEME_DIR}/${THEME_NAME}"
   cp -a "${SCRIPT_DIR}/${THEME_NAME}/." "${THEME_DIR}/${THEME_NAME}/"
