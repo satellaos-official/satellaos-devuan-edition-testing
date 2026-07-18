@@ -17,7 +17,8 @@ bash $script_source/silent-kernel/run.sh
 bash $script_source/grub-settings/run.sh
 bash $script_source/grub-theme/run.sh
 bash $script_source/lightdm-settings/run.sh
-bash $script_source/update-configuration/run.sh
+bash $script_source/update-user-configuration/run.sh
+bash $script_source/update-root-configuration/run.sh
 bash $script_source/update-adduser/run.sh
 bash $script_source/pictures/run.sh
 bash $script_source/themes/run-part1.sh
