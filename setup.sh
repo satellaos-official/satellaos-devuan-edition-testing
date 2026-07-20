@@ -6,6 +6,7 @@ source "$HOME/.satellaos-source/installer"
 #-----------------------------
 
 #--------Shared Script--------
+bash $script_source/seatd-installer/run.sh
 bash $script_source/update-adduser/run.sh
 bash $script_source/network-manager/run.sh
 bash $script_source/clean-network-interfaces/run.sh
