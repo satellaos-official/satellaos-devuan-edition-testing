@@ -31,17 +31,17 @@ bash $script_source/font-installer/run.sh
 bash $script_source/fastfetch/run.sh
 #-----------------------------
 
-#------- Desktop Environment Prompt -------
-read -p "Do you want to enter the Desktop Environment? (Y/N): " answer
+#------- LightDM Prompt -------
+read -p "Do you want to start LightDM? (Y/N): " answer
 case "$answer" in
     [Yy]* )
-        startxfce4
+        sudo rc-service lightdm start
         ;;
     [Nn]* )
-        echo "Skipping Desktop Environment."
+        echo "Skipping LightDM."
         ;;
     * )
-        echo "Invalid input, skipping Desktop Environment."
+        echo "Invalid input, skipping LightDM."
         ;;
 esac
 #-------------------------------------------
