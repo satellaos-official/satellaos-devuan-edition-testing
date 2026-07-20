@@ -242,14 +242,11 @@ for num in $SELECTIONS; do
 done
 
 if [[ ${#FAILED[@]} -gt 0 ]]; then
-    whiptail --title "Driver Installer" --msgbox \
-        "Some drivers failed to install.\nFailed action IDs: ${FAILED[*]}\n\nCheck the terminal output above for details." \
-        12 60
+    echo "!!! Some drivers failed to install."
+    echo "!!! Failed action IDs: ${FAILED[*]}"
     exit 1
 fi
 
-whiptail --title "Driver Installer" --msgbox \
-    "All selected drivers were installed successfully.\nA reboot is recommended for the changes to take effect." \
-    10 60
+echo ">>> All selected drivers were installed successfully."
 
 exit 0
