@@ -1,2 +1,3 @@
+project_name=satellaos-devuan-edition-testing
 repo=$HOME/satellaos-devuan-edition-testing
 script_source=$HOME/satellaos-devuan-edition-testing/tree-installer-system
