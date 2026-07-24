@@ -279,7 +279,24 @@ install_flatseal() {
 install_fdm() {
     wget -O "$PKG_DIR/freedownloadmanager.deb" \
         https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb
-    sudo apt install -y "$PKG_DIR/freedownloadmanager.deb"
+
+    local extract_dir="$PKG_DIR/fdm-extract"
+    rm -rf "$extract_dir"
+    mkdir -p "$extract_dir"
+
+    dpkg-deb -R "$PKG_DIR/freedownloadmanager.deb" "$extract_dir"
+
+    local postinst="$extract_dir/DEBIAN/postinst"
+    if [ -f "$postinst" ]; then
+        perl -0pi -e \
+            's/^[ \t]*systemctl restart apparmor\n[ \t]*systemctl restart apparmor\.service\n/    rc-service apparmor restart 2>\/dev\/null || true\n/m' \
+            "$postinst"
+    fi
+
+    dpkg-deb -b "$extract_dir" "$PKG_DIR/freedownloadmanager-openrc.deb"
+    rm -rf "$extract_dir"
+
+    sudo apt install -y "$PKG_DIR/freedownloadmanager-openrc.deb"
 }
 
 # ---------------------------------------------------------------------------
